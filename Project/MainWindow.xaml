@@ -1,0 +1,42 @@
+﻿<Window x:Class="Project.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}" Loaded="Window_Loaded">
+    <Window.Resources>
+        <DataTemplate x:Key="listboxTemplate">
+            <StackPanel Orientation="Horizontal" Margin="30">
+
+                <Image Source="{Binding CompanyImage}" Width="150"/>
+
+                <StackPanel>
+                    <TextBlock Text="{Binding CompanyName}" Margin="5" FontSize="12"/>
+                    <TextBlock Text="{Binding CompanyGame}" Margin="5" FontSize="12"/>
+                    <TextBlock Text="{Binding GameInfo}" Margin="5" FontSize="12"/>
+                    <TextBlock Text="{Binding GameScore}" Margin="5" Background="{Binding GameScore_Colour}" FontSize="12"/>
+                </StackPanel>
+
+            </StackPanel>
+
+        </DataTemplate>
+    </Window.Resources>
+
+    <Grid>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="348,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.405,0.665"/>
+        <Label Content="Game Company Top Sellers" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <ComboBox HorizontalAlignment="Left" Margin="647,10,0,0" VerticalAlignment="Top" Width="120"/>
+        <ListBox x:Name="lbxCompany" HorizontalAlignment="Left" Height="305" Margin="10,70,0,0" VerticalAlignment="Top" Width="422" ItemTemplate="{StaticResource listboxTemplate}"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="263,17,0,0" VerticalAlignment="Top"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="460,30,0,0" VerticalAlignment="Top"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="632,30,0,0" VerticalAlignment="Top"/>
+        <ListBox HorizontalAlignment="Left" Height="120" Margin="488,255,0,0" VerticalAlignment="Top" Width="223"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="503,232,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Image HorizontalAlignment="Left" Height="126" Margin="488,70,0,0" VerticalAlignment="Top" Width="223"/>
+
+    </Grid>
+</Window>
