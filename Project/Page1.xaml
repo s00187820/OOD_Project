@@ -1,0 +1,20 @@
+﻿<Page x:Class="Project.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Project"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Page1">
+
+    <Grid>
+        <Image Source="Resources/background.jpg" Stretch="UniformToFill"></Image>
+        <ListBox HorizontalAlignment="Left" Height="226" Margin="48,59,0,0" VerticalAlignment="Top" Width="336"/>
+        <Image HorizontalAlignment="Left" Height="64" Margin="711,49,0,0" VerticalAlignment="Top" Width="71" Source="Resources/IGN_Logo.png"/>
+        <Button Content="Refresh" HorizontalAlignment="Left" Margin="173,302,0,0" VerticalAlignment="Top" Width="82"/>
+        <DatePicker HorizontalAlignment="Left" Margin="711,135,0,0" VerticalAlignment="Top" Width="62"/>
+
+
+    </Grid>
+</Page>

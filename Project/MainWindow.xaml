@@ -19,7 +19,14 @@
                     <TextBlock Text="{Binding CompanyGame}" Margin="5" FontSize="12"/>
                     <TextBlock Text="{Binding GameInfo}" Margin="5" FontSize="12"/>
                     <TextBlock Text="{Binding GameScore}" Margin="5" Background="{Binding GameScore_Colour}" FontSize="12"/>
+
                 </StackPanel>
+
+                <TextBox Height="23" Name="textBox1" Width="120" Margin="10,10,0,0" HorizontalAlignment="Left">
+                    <TextBox.Text>
+                        <Binding ElementName="lbxCompany" Path="SelectedItem.Content" />
+                    </TextBox.Text>
+                </TextBox>
 
             </StackPanel>
 
@@ -27,16 +34,22 @@
     </Window.Resources>
 
     <Grid>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="348,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.405,0.665"/>
+        <StackPanel Orientation="Horizontal" Height="35" VerticalAlignment="Top" Background="#FF131313">
+            <Button Content="Page 1" MinWidth="100" Click="Button_Click"/>
+            <Button Content="Page 2" MinWidth="100" Margin="10,0,0,0" Click="Button_Click_1"/>
+        </StackPanel>
+        <Frame x:Name="Main" Margin="0,35,0,0" NavigationUIVisibility="Hidden"/>
+
         <Label Content="Game Company Top Sellers" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <ComboBox HorizontalAlignment="Left" Margin="647,10,0,0" VerticalAlignment="Top" Width="120"/>
-        <ListBox x:Name="lbxCompany" HorizontalAlignment="Left" Height="305" Margin="10,70,0,0" VerticalAlignment="Top" Width="422" ItemTemplate="{StaticResource listboxTemplate}"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="263,17,0,0" VerticalAlignment="Top"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="460,30,0,0" VerticalAlignment="Top"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="632,30,0,0" VerticalAlignment="Top"/>
-        <ListBox HorizontalAlignment="Left" Height="120" Margin="488,255,0,0" VerticalAlignment="Top" Width="223"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="503,232,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Image HorizontalAlignment="Left" Height="126" Margin="488,70,0,0" VerticalAlignment="Top" Width="223"/>
+
+        <ComboBox HorizontalAlignment="Left" Margin="488,70,0,0" VerticalAlignment="Top" Width="120"/>
+        <ListBox x:Name="lbxCompany" HorizontalAlignment="Left" Height="305" Margin="10,70,0,0" VerticalAlignment="Top" Width="441" ItemTemplate="{StaticResource listboxTemplate}" SelectionChanged="LbxCompany_SelectionChanged"/>
+        <Label Content="Information" HorizontalAlignment="Left" Margin="502,106,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.095,0.25"/>
+        <Label Content="The team" HorizontalAlignment="Left" Margin="630,106,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbxTeam" HorizontalAlignment="Left" Height="227" Margin="488,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="264" Initialized="TbxTeam_Initialized"/>
+        <Image HorizontalAlignment="Left" Height="64" Margin="711,49,0,0" VerticalAlignment="Top" Width="71" Source="Resources/IGN_Logo.png"/>
+        <DatePicker HorizontalAlignment="Left" Margin="692,118,0,0" VerticalAlignment="Top" Width="90"/>
+
 
     </Grid>
 </Window>

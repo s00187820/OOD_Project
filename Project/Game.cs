@@ -26,10 +26,12 @@ namespace Project
         {
             get
             {
-                if (GameScore >= 70)
+                if (GameScore >= 80)
                     return "Green";
-                else
+                if (GameScore >= 60)
                     return "Orange";
+                else
+                    return "Red";
             }
         }
     }
