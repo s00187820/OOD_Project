@@ -43,11 +43,11 @@
         <Label Content="Game Company Top Sellers" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top" FontSize="16"/>
 
         <ComboBox HorizontalAlignment="Left" Margin="488,70,0,0" VerticalAlignment="Top" Width="120"/>
-        <ListBox x:Name="lbxCompany" HorizontalAlignment="Left" Height="305" Margin="10,70,0,0" VerticalAlignment="Top" Width="441" ItemTemplate="{StaticResource listboxTemplate}" SelectionChanged="LbxCompany_SelectionChanged"/>
+        <ListBox x:Name="lbxCompany" HorizontalAlignment="Left" Height="305" Margin="10,67,0,0" VerticalAlignment="Top" Width="441" ItemTemplate="{StaticResource listboxTemplate}" SelectionChanged="LbxCompany_SelectionChanged"/>
         <Label Content="Information" HorizontalAlignment="Left" Margin="502,106,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.095,0.25"/>
         <Label Content="The team" HorizontalAlignment="Left" Margin="630,106,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tbxTeam" HorizontalAlignment="Left" Height="227" Margin="488,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="264" Initialized="TbxTeam_Initialized"/>
-        <Image HorizontalAlignment="Left" Height="64" Margin="711,49,0,0" VerticalAlignment="Top" Width="71" Source="Resources/IGN_Logo.png"/>
+        <Image HorizontalAlignment="Left" Height="64" Margin="711,49,0,0" VerticalAlignment="Top" Width="60" Source="Resources/IGN_Logo.png"/>
         <DatePicker HorizontalAlignment="Left" Margin="692,118,0,0" VerticalAlignment="Top" Width="90"/>
 
 
