@@ -14,6 +14,8 @@
         <Image HorizontalAlignment="Left" Height="64" Margin="711,49,0,0" VerticalAlignment="Top" Width="71" Source="Resources/IGN_Logo.png"/>
         <Button Content="Refresh" HorizontalAlignment="Left" Margin="173,302,0,0" VerticalAlignment="Top" Width="82"/>
         <DatePicker HorizontalAlignment="Left" Margin="711,135,0,0" VerticalAlignment="Top" Width="62"/>
+        <Image HorizontalAlignment="Left" Height="117" Margin="421,124,0,0" VerticalAlignment="Top" Width="207" Source="Resources/valveCompany.jpg"/>
+        <Label Content="Company Information" HorizontalAlignment="Left" Margin="122,22,0,0" VerticalAlignment="Top" FontSize="18"/>
 
 
     </Grid>
